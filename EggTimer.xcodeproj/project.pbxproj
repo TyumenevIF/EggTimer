@@ -10,10 +10,13 @@
 		43288D8429DFD71400A9F6A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43288D8329DFD71400A9F6A5 /* AppDelegate.swift */; };
 		43288D8629DFD71400A9F6A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43288D8529DFD71400A9F6A5 /* SceneDelegate.swift */; };
 		43288D8829DFD71400A9F6A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43288D8729DFD71400A9F6A5 /* ViewController.swift */; };
-		43288D8B29DFD71400A9F6A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43288D8929DFD71400A9F6A5 /* Main.storyboard */; };
 		43288D8D29DFD71E00A9F6A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43288D8C29DFD71E00A9F6A5 /* Assets.xcassets */; };
 		43288D9029DFD71E00A9F6A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43288D8E29DFD71E00A9F6A5 /* LaunchScreen.storyboard */; };
 		43288D9829DFD78300A9F6A5 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 43288D9729DFD78300A9F6A5 /* alarm_sound.mp3 */; };
+		433A293A2A76D774002D6B67 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A29392A76D774002D6B67 /* TitleView.swift */; };
+		433A293D2A76DD84002D6B67 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 433A293C2A76DD84002D6B67 /* SnapKit */; };
+		433A293F2A76DDD1002D6B67 /* EggStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A293E2A76DDD1002D6B67 /* EggStackView.swift */; };
+		433A29412A76DDED002D6B67 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A29402A76DDED002D6B67 /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +24,13 @@
 		43288D8329DFD71400A9F6A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43288D8529DFD71400A9F6A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		43288D8729DFD71400A9F6A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		43288D8A29DFD71400A9F6A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43288D8C29DFD71E00A9F6A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43288D8F29DFD71E00A9F6A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43288D9129DFD71E00A9F6A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43288D9729DFD78300A9F6A5 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
+		433A29392A76D774002D6B67 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		433A293E2A76DDD1002D6B67 /* EggStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggStackView.swift; sourceTree = "<group>"; };
+		433A29402A76DDED002D6B67 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433A293D2A76DD84002D6B67 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +67,9 @@
 				43288D8329DFD71400A9F6A5 /* AppDelegate.swift */,
 				43288D8529DFD71400A9F6A5 /* SceneDelegate.swift */,
 				43288D8729DFD71400A9F6A5 /* ViewController.swift */,
-				43288D8929DFD71400A9F6A5 /* Main.storyboard */,
+				433A29392A76D774002D6B67 /* TitleView.swift */,
+				433A293E2A76DDD1002D6B67 /* EggStackView.swift */,
+				433A29402A76DDED002D6B67 /* TimerView.swift */,
 				43288D8C29DFD71E00A9F6A5 /* Assets.xcassets */,
 				43288D8E29DFD71E00A9F6A5 /* LaunchScreen.storyboard */,
 				43288D9129DFD71E00A9F6A5 /* Info.plist */,
@@ -86,6 +94,9 @@
 			dependencies = (
 			);
 			name = EggTimer;
+			packageProductDependencies = (
+				433A293C2A76DD84002D6B67 /* SnapKit */,
+			);
 			productName = EggTimer;
 			productReference = 43288D8029DFD71400A9F6A5 /* EggTimer.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 43288D7729DFD71400A9F6A5;
+			packageReferences = (
+				433A293B2A76DD84002D6B67 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 43288D8129DFD71400A9F6A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,7 +145,6 @@
 				43288D9029DFD71E00A9F6A5 /* LaunchScreen.storyboard in Resources */,
 				43288D8D29DFD71E00A9F6A5 /* Assets.xcassets in Resources */,
 				43288D9829DFD78300A9F6A5 /* alarm_sound.mp3 in Resources */,
-				43288D8B29DFD71400A9F6A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433A29412A76DDED002D6B67 /* TimerView.swift in Sources */,
 				43288D8829DFD71400A9F6A5 /* ViewController.swift in Sources */,
+				433A293A2A76D774002D6B67 /* TitleView.swift in Sources */,
+				433A293F2A76DDD1002D6B67 /* EggStackView.swift in Sources */,
 				43288D8429DFD71400A9F6A5 /* AppDelegate.swift in Sources */,
 				43288D8629DFD71400A9F6A5 /* SceneDelegate.swift in Sources */,
 			);
@@ -151,14 +167,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		43288D8929DFD71400A9F6A5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				43288D8A29DFD71400A9F6A5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		43288D8E29DFD71E00A9F6A5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -298,7 +306,6 @@
 				INFOPLIST_FILE = EggTimer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -326,7 +333,6 @@
 				INFOPLIST_FILE = EggTimer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -364,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		433A293B2A76DD84002D6B67 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		433A293C2A76DD84002D6B67 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 433A293B2A76DD84002D6B67 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43288D7829DFD71400A9F6A5 /* Project object */;
 }
