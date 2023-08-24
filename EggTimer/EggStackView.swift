@@ -26,14 +26,13 @@ class EggStackView: UIView {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "soft_egg")
         imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    private let softEggButton: UIButton = {
+    lazy var softEggButton: UIButton = {
         let button = UIButton()
         button.setTitle("Soft", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 18)
+        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .black)
         button.setTitleColor(.white, for: .normal)
         button.contentHorizontalAlignment = .center
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
@@ -49,14 +48,13 @@ class EggStackView: UIView {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "medium_egg")
         imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    private let mediumEggButton: UIButton = {
+    lazy var mediumEggButton: UIButton = {
         let button = UIButton()
         button.setTitle("Medium", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 18)
+        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .black)
         button.setTitleColor(.white, for: .normal)
         button.contentHorizontalAlignment = .center
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
@@ -76,10 +74,10 @@ class EggStackView: UIView {
         return imageView
     }()
     
-    private let hardEggButton: UIButton = {
+    lazy var hardEggButton: UIButton = {
         let button = UIButton()
         button.setTitle("Hard", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 18)
+        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .black)
         button.setTitleColor(.white, for: .normal)
         button.contentHorizontalAlignment = .center
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
@@ -122,8 +120,7 @@ class EggStackView: UIView {
     
     private func addConstraints() {
         eggStackView.snp.makeConstraints { (make) in
-            make.top.bottom.equalToSuperview()
-            make.leading.trailing.equalToSuperview()
+            make.edges.equalToSuperview()
         }
         
         softEggButton.snp.makeConstraints { make in

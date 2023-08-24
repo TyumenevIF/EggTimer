@@ -11,13 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    // MARK: - Properties
-    private let backgroundView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(red: 203/255, green: 242/255, blue: 252/255, alpha: 1.0)
-        return view
-    }()
-    
+    // MARK: - Properties    
     private let titleView = TitleView()
     private let eggStackView = EggStackView()
     private let timerView = TimerView()
@@ -43,6 +37,7 @@ class ViewController: UIViewController {
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(red: 203/255, green: 242/255, blue: 252/255, alpha: 1.0)
         eggStackView.delegate = self
         setViews()
         setupConstraints()
@@ -56,15 +51,10 @@ class ViewController: UIViewController {
     }
     
     private func setViews() {
-        view.addSubview(backgroundView)
-        backgroundView.addSubview(mainStackView)
+        view.addSubview(mainStackView)
     }
     
     private func setupConstraints() {
-        
-        backgroundView.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
-        }
         
         mainStackView.snp.makeConstraints { make in
             make.top.equalTo(view.snp.topMargin)
