@@ -22,15 +22,14 @@ class TitleView: UIView {
         label.font = .systemFont(ofSize: 30)
         label.textColor = .darkGray
         label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
     // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addViews()
-        addConstraints()
+        setSubviews()
+        setupConstraints()
     }
 
     required init?(coder: NSCoder) {
@@ -38,18 +37,18 @@ class TitleView: UIView {
     }
 
     // MARK: - Private Methods
-    private func addViews() {
+    private func setSubviews() {
         addSubview(titleView)
         titleView.addSubview(titleLabel)
     }
 
-    private func addConstraints() {
+    private func setupConstraints() {
         titleView.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
+            make.edges.equalToSuperview()
         }
 
         titleLabel.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
+            make.edges.equalToSuperview()
         }
     }
 }

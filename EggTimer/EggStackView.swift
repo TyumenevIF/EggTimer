@@ -70,7 +70,6 @@ class EggStackView: UIView {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "hard_egg")
         imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -99,8 +98,8 @@ class EggStackView: UIView {
     // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addViews()
-        addConstraints()
+        setSubviews()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -108,7 +107,7 @@ class EggStackView: UIView {
     }
     
     // MARK: - Private Methods
-    private func addViews() {
+    private func setSubviews() {
         addSubview(eggStackView)
         softEggView.addSubview(softEggImageView)
         softEggView.addSubview(softEggButton)
@@ -118,7 +117,7 @@ class EggStackView: UIView {
         hardEggView.addSubview(hardEggButton)
     }
     
-    private func addConstraints() {
+    private func setupConstraints() {
         eggStackView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }

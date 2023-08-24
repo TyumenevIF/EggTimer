@@ -22,15 +22,14 @@ class TimerView: UIView {
         progressBar.progress = 0
         progressBar.tintColor = .systemYellow
         progressBar.trackTintColor = .systemGray
-        progressBar.translatesAutoresizingMaskIntoConstraints = false
         return progressBar
     }()
 
     // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addViews()
-        addConstraints()
+        setSubviews()
+        setupConstraints()
     }
 
     required init?(coder: NSCoder) {
@@ -38,14 +37,14 @@ class TimerView: UIView {
     }
 
     // MARK: - Private Methods
-    private func addViews() {
+    private func setSubviews() {
         addSubview(timerView)
         timerView.addSubview(progressView)
     }
 
-    private func addConstraints() {        
+    private func setupConstraints() {        
         timerView.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
+            make.edges.equalToSuperview()
         }
 
         progressView.snp.makeConstraints { make in
